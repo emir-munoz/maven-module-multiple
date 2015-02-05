@@ -29,7 +29,7 @@
 				<version>2.5.1</version>
 				<configuration>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
-					<scmCommentPrefix>Release: </scmCommentPrefix>
+					<scmCommentPrefix xml:space="preserve">Release: </scmCommentPrefix>
 				</configuration>
 			</plugin>
 
