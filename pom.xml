@@ -29,7 +29,7 @@
 				<version>2.5.1</version>
 				<configuration>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
-					<scmCommentPrefix>Release:${line.separator}</scmCommentPrefix>
+					<scmCommentPrefix>#42${line.separator}</scmCommentPrefix>
 				</configuration>
 			</plugin>
 
