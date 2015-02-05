@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<!-- Basic Settings -->
 	<modelVersion>4.0.0</modelVersion>
@@ -14,20 +15,34 @@
 		<connection>scm:git:git@github.com:fekepp/maven-module-multiple.git</connection>
 		<developerConnection>scm:git:git@github.com:fekepp/maven-module-multiple.git</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://github.com/fekepp</url>
+		<url>https://github.com/fekepp/maven-module-multiple</url>
 	</scm>
 
 	<!-- Build -->
 	<build>
 		<plugins>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.5.1</version>
 				<configuration>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<scmCommentPrefix></scmCommentPrefix>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>de.jutzig</groupId>
+				<artifactId>github-release-plugin</artifactId>
+				<version>1.1.0</version>
+				<configuration>
+					<description>Description of your release</description>
+					<releaseName>Maven Multi-Module${project.version}</releaseName>
+					<tag>${project.version}</tag>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 
@@ -83,4 +98,6 @@
 
 	</dependencies>
 
+	<name>Maven Multi-Module Stub</name>
+	<url>https://github.com/fekepp/maven-module-multiple</url>
 </project>
