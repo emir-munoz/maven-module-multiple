@@ -7,6 +7,8 @@
 	<artifactId>maven-module-multiple</artifactId>
 	<version>0.0.4-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<name>Maven Multi-Module Stub</name>
+	<url>https://github.com/fekepp/maven-module-multiple</url>
 
 	<!-- SCM -->
 	<!-- http://maven.apache.org/pom.html#SCM -->
@@ -27,7 +29,7 @@
 				<version>2.5.1</version>
 				<configuration>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
-					<scmCommentPrefix />
+					<scmCommentPrefix>Test</scmCommentPrefix>
 				</configuration>
 			</plugin>
 
@@ -97,6 +99,4 @@
 
 	</dependencies>
 
-	<name>Maven Multi-Module Stub</name>
-	<url>https://github.com/fekepp/maven-module-multiple</url>
 </project>
