@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.github.fekepp.maven-module-multiple</groupId>
 		<artifactId>maven-module-multiple</artifactId>
-		<version>0.0.5-SNAPSHOT</version>
+		<version>0.0.5</version>
 	</parent>
 	<artifactId>maven-module-multiple-module-two</artifactId>
 
