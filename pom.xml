@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<!-- Basic Settings -->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.fekepp.maven-module-multiple</groupId>
 	<artifactId>maven-module-multiple</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.3</version>
 	<packaging>pom</packaging>
 
 	<!-- SCM -->
@@ -14,7 +13,7 @@
 	<scm>
 		<connection>scm:git:git@github.com:fekepp/maven-module-multiple.git</connection>
 		<developerConnection>scm:git:git@github.com:fekepp/maven-module-multiple.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>v0.0.3</tag>
 		<url>https://github.com/fekepp/maven-module-multiple</url>
 	</scm>
 
@@ -28,7 +27,7 @@
 				<version>2.5.1</version>
 				<configuration>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
-					<scmCommentPrefix></scmCommentPrefix>
+					<scmCommentPrefix />
 				</configuration>
 			</plugin>
 
