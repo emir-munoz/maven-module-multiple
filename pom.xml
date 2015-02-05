@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<!-- Basic Settings -->
 	<modelVersion>4.0.0</modelVersion>
@@ -28,7 +29,7 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.5.1</version>
 				<configuration>
-					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<tagNameFormat>@{project.version}</tagNameFormat>
 					<scmCommentPrefix xml:space="preserve">Release: </scmCommentPrefix>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 				</configuration>
@@ -45,6 +46,28 @@
 					<tag>${project.version}</tag>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>de.jutzig</groupId>
+				<artifactId>github-release-plugin</artifactId>
+				<version>1.1.0</version>
+				<executions>
+					<execution>
+						<id>github-release</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>release</goal>
+						</goals>
+						<inherited>false</inherited>
+						<configuration>
+							<releaseName>v1.0.1</releaseName>
+							<tag>v1.0.1</tag>
+							<artifact>${project.build.directory}/${project.groupId}.${project.artifactId}-${project.version}.jar</artifact>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 
 		</plugins>
 	</build>
